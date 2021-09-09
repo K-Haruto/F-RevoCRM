@@ -20,6 +20,10 @@ $languageStrings = array(
 	'LBL_CHOOSE_PROFILES' => 'プロファイルの選択',
 	'LBL_COPY_PRIVILEGES_FROM' => '権限をコピーしてくる',
     'LBL_TRANSFER_TO_OTHER_ROLE' =>'所有権を他の役割に譲渡する',
+	'Administrator' => '管理者',
+	'Sales Profile' => 'セールス',
+	'Support Profile' => 'サポート',
+	'Guest Profile' => 'ゲスト',
 	
 	//Edit View
 	'LBL_PROFILE' => 'プロファイル',

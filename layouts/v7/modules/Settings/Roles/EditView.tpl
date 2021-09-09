@@ -103,10 +103,10 @@
                             <div class="fieldLabel control-label col-lg-3 col-md-3 col-sm-3"></div>
                             <div class="fieldValue controls col-lg-9 col-md-9 col-sm-9">
                                 {assign var="ROLE_PROFILES" value=$RECORD_MODEL->getProfiles()}
-                                <select class="select2 inputElement col-lg-12 hide" multiple="true" id="profilesList" name="profiles[]" data-placeholder="{vtranslate('LBL_CHOOSE_PROFILES',$QUALIFIED_MODULE)}" style="width: 460px" data-rule-required="true">
+                                <select class="select2 inputElement col-lg-12 hide" multiple="true" id="profilesList" name="profiles[]" data-placeholder="{vtranslate('LBL_CHOOSE_PROFILES',$QUALIFIED_MODULE)}" style="width: 460px" data-rule-required="true"> {*ここ消えてる気がする*}
                                     {foreach from=$ALL_PROFILES item=PROFILE}
                                         {if $PROFILE->isDirectlyRelated() eq false}
-                                            <option value="{$PROFILE->getId()}" {if isset($ROLE_PROFILES[$PROFILE->getId()])}selected="true"{/if}>{$PROFILE->getName()}</option>
+                                            <option value="{$PROFILE->getId()}" {if isset($ROLE_PROFILES[$PROFILE->getId()])}selected="true"{/if}>{vtranslate($PROFILE->getName(),$QUALIFIED_MODULE)}</option>
                                         {/if}
                                     {/foreach}
                                 </select>
