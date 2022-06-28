@@ -299,6 +299,10 @@ Calendar_Calendar_Js('Calendar_SharedCalendar_Js', {
 			})
 
 			var users = thisInstance.userList['users'];
+			if(users[myId] == null){
+				// usersにログインユーザーを含める。idのみ取得できればよいのでnullにしている
+				users[myId] = '';
+			}
 			var sharedInfo = thisInstance.userList['sharedinfo'] ? thisInstance.userList['sharedinfo'] : {};
 
 			Object.keys(users).forEach(function (id) {
