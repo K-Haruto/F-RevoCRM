@@ -45,3 +45,4 @@ if (defined('VTIGER_UPGRADE')) {
     $adb->pquery("INSERT INTO vtiger_relatedlists VALUES(?,?,?,?,?,?,?,?,?,?,?)", array($adb->getUniqueID('vtiger_relatedlists'),getTabid("HelpDesk"),getTabid("Assets"),"get_related_list",$max_sequence,"Assets",0,"ADD,SELECT","NULL","NULL","N:N"));
 
 }
+// sample
