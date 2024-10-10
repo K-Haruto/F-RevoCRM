@@ -11,7 +11,8 @@
 -->*}
 {if $SETTING_EXIST}
 <a name="dfilter">
-	<i class='fa fa-cog' border='0' align="absmiddle" title="{vtranslate('LBL_FILTER')}" alt="{vtranslate('LBL_FILTER')}"/>
+	&nbsp;
+  <i class='fa fa-cog' border='0' align="absmiddle" title="{vtranslate('LBL_FILTER')}" alt="{vtranslate('LBL_FILTER')}"/>
 </a>
 {/if}
 {if !empty($CHART_TYPE)}
@@ -20,19 +21,23 @@
 {/if}
 {if (!empty($DATA) && empty($CHART_TYPE))|| !empty($CHART_VALUES)}
 <a href="javascript:void(0);" name="widgetFullScreen">
-	<i class="fa fa-arrows-alt" hspace="2" border="0" align="absmiddle" title="{vtranslate('LBL_FULLSCREEN')}" alt="{vtranslate('LBL_FULLSCREEN')}"></i>
+	&nbsp;
+  <i class="fa fa-arrows-alt" border="0" align="absmiddle" title="{vtranslate('LBL_FULLSCREEN')}" alt="{vtranslate('LBL_FULLSCREEN')}"></i>
 </a>
 {/if}
 {if !empty($CHART_TYPE) && $REPORT_MODEL->isEditable() eq true}
 <a href="{$REPORT_MODEL->getEditViewUrl()}" name="customizeChartReportWidget">
-	<i class="fa fa-edit" hspace="2" border="0" align="absmiddle" title="{vtranslate('LBL_CUSTOMIZE',$MODULE)}" alt="{vtranslate('LBL_CUSTOMIZE',$MODULE)}"></i>
+	&nbsp;
+  <i class="fa fa-edit" border="0" align="absmiddle" title="{vtranslate('LBL_CUSTOMIZE',$MODULE)}" alt="{vtranslate('LBL_CUSTOMIZE',$MODULE)}"></i>
 </a>
 {/if}
 <a href="javascript:void(0);" name="drefresh" data-url="{$WIDGET->getUrl()}&linkid={$WIDGET->get('linkid')}&content=data">
-	<i class="fa fa-refresh" hspace="2" border="0" align="absmiddle" title="{vtranslate('LBL_REFRESH')}" alt="{vtranslate('LBL_REFRESH')}"></i>
+	&nbsp;
+  <i class="fa fa-refresh" border="0" align="absmiddle" title="{vtranslate('LBL_REFRESH')}" alt="{vtranslate('LBL_REFRESH')}"></i>
 </a>
 {if !$WIDGET->isDefault()}
 	<a name="dclose" class="widget" data-url="{$WIDGET->getDeleteUrl()}">
-		<i class="fa fa-remove" hspace="2" border="0" align="absmiddle" title="{vtranslate('LBL_REMOVE')}" alt="{vtranslate('LBL_REMOVE')}"></i>
+		&nbsp;
+    <i class="fa fa-remove" border="0" align="absmiddle" title="{vtranslate('LBL_REMOVE')}" alt="{vtranslate('LBL_REMOVE')}"></i>
 	</a>
 {/if}
